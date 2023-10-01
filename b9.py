@@ -18,4 +18,3 @@ for i in range (loop):
 
 total = total - 30
 print(total)
-
