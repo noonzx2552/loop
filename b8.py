@@ -8,9 +8,9 @@ time1 = 0
 time2= 0
 time3 = 0
 
-days = ("Mon,Tus,wen,thi,fri")
+days = ["Mon","Tus","wen","thi","fri"]
 
-for i in range (days):
+for day in days:
     shop =random.choice(["visittime1", "visittime2", "visittime3"])
     if days == "wen":
         if shop == "visittime1":
