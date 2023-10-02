@@ -10,15 +10,11 @@ bank50 = 0
 bank20 = 0
 coin10 = 0
 coin5 = 0
-coin2 = 0
+coin2 = 0 
 coin1 = 0
 
-for i in range ():
-    if x % 100 == 0:
-       y = totalbank50 + totalbank20
-       y = totalcoin1 + totalcoin5 + totalcoin2 + totalcoin1 
+for i in range (1):
+    if x % 100 != 0:
+       print("เเลกไม่ได้!")
     else:
-        print("error")
-
-print(bank50,bank20,coin10,coin5,coin2,coin1)
 

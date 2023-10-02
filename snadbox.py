@@ -1,19 +1,21 @@
-while True:
-    # รับ input จำนวนชั่วโมงและนาที
-    hour = int(input("ป้อนจำนวนชั่วโมง (หยุดโปรแกรมโดยป้อน -1): "))
-    
-    # ถ้าผู้ใช้ป้อน -1 ให้ออกจากลูป
-    if hour == -1:
-        break
+# รับค่าจำนวนนักเรียนทั้งหมด
+total_students = int(input("ป้อนจำนวนนักเรียนทั้งหมด: "))
 
-    minute = int(input("ป้อนจำนวนนาที: "))
+# กำหนดตัวแปรสำหรับนับนักเรียนในแต่ละกลุ่ม
+group_a_count = 0
+group_b_count = 0
+group_c_count = 0
 
-    # คำนวณค่าที่จอดรถ
-    total_hours = hour + (minute // 60)  # รวมชั่วโมงและเศษนาทีเป็นชั่วโมง
-    if total_hours <= 1:
-        parking_fee = 0  # ชั่วโมงแรกจอดฟรี
+# ใช้ลูปเพื่อแบ่งนักเรียนเป็น 3 กลุ่ม
+for i in range(1, total_students + 1):
+    if i % 3 == 1:
+        group_a_count += 1
+    elif i % 3 == 2:
+        group_b_count += 1
     else:
-        parking_fee = (total_hours - 1) * 30  # ค่าจอดชั่วโมงละ 30 บาท
+        group_c_count += 1
 
-    # แสดงค่าที่จอดรถ
-    print(f"ค่าที่จอดรถ: {parking_fee} บาท")
+# แสดงผลลัพธ์
+print(f"จำนวนนักเรียนในกลุ่ม A: {group_a_count} คน")
+print(f"จำนวนนักเรียนในกลุ่ม B: {group_b_count} คน")
+print(f"จำนวนนักเรียนในกลุ่ม C: {group_c_count} คน")

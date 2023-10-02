@@ -1,3 +1,4 @@
+shopping = int(input("shopping:"))
 hour = int(input("Hour:"))
 minute = int(input("minute:"))
 total = 0 
@@ -13,5 +14,12 @@ for i in range (loop):
     else:
         total += 0
 
-total = total - 30
-print(total)
+if shopping >= 1000:
+    total = total - 120
+else:
+    total = total - 30
+
+if total <= 0:
+    print("you have to pay for park Free!.")
+else:
+    print(f"you have to pay for park {total} bath")
