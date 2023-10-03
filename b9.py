@@ -12,4 +12,8 @@ if hour >= 1:
 else:
     total_hr = 0
 total = total_min + total_hr - 30
-print(total)
+#------------------------------------#
+if total <= 0:
+    print("freepark!")
+else:
+    print(total)
