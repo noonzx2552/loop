@@ -11,8 +11,8 @@ time3 = 0
 days = ["Mon","Tus","wen","thi","fri"]
 
 for day in days:
-    shop =random.choice(["visittime1", "visittime2", "visittime3"])
     if days == "wen":
+        shop =random.choice(["visittime1", "visittime2", "visittime3"])
         if shop == "visittime1":
             visittime1 += 1
             time1 += 5
@@ -24,11 +24,11 @@ for day in days:
             time3 += 30
     else:
         for i in range(2):
-        #shop = random.choice(["visittime1", "visittime2", "visittime3"])
-            if shop == "visittime1":
+            shop_ = random.choice(["visittime1", "visittime2", "visittime3"])
+            if shop_ == "visittime1":
                 visittime1 += 1
                 time1 += 5
-            elif shop == "visittime2":
+            elif shop_ == "visittime2":
                 visittime2 += 1
                 time2 += 10
             else:
