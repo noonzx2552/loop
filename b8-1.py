@@ -13,8 +13,10 @@ time4 = 0
 days = ["Mon","Tus","wen","thi","fri","sat"]
 
 for day in days:
-    shop =random.choice(["visittime1", "visittime2", "visittime3","visittime4"])
-    if days == "wen":
+    if day == "wen":
+        shop =random.choice(["visittime1", "visittime2", "visittime3","visittime4"])
+        print(f"วันพุธ:{shop}")
+        print("------------------------------")
         if shop == "visittime1":
             visittime1 += 1
             time1 += 5
@@ -29,13 +31,13 @@ for day in days:
             time4 += 45
     elif day == "sat":#ห้ามเข้าร้านshop1
         for i in range(2):
-            if shop == "visittime1":
-                visittime1 += 0
-                time1 += 0
-            elif shop == "visittime2":
+            shop_1 =random.choice(["visittime2", "visittime3","visittime4"])
+            print(f"วันเสาร์:{shop_1}")
+            print("------------------------------")
+            if shop_1 == "visittime2":
                 visittime2 += 1
                 time2 += 10
-            elif shop == "visittime3":
+            elif shop_1 == "visittime3":
                 visittime3 += 1
                 time3 += 30
             else:
@@ -43,13 +45,15 @@ for day in days:
                 time4 += 45
     else:
         for i in range(2):
-            if shop == "visittime1":
+            shop_2 =random.choice(["visittime1", "visittime2", "visittime3","visittime4"])
+            print(f"day: {day} {shop_2}")
+            if shop_2 == "visittime1":
                 visittime1 += 1
                 time1 += 5
-            elif shop == "visittime2":
+            elif shop_2 == "visittime2":
                 visittime2 += 1
                 time2 += 10
-            elif shop == "visittime3":
+            elif shop_2 == "visittime3":
                 visittime3 += 1
                 time3 += 30
             else:
