@@ -1,20 +1,16 @@
 x = int(input("ต้องการเเลกเงินเท่าไหร่:"))
-y = x / 2
-totalbank50 = 50 
-totalbank20 = 20
-totalcoin10 = 10 
-totalcoin5 = 5
-totalcoin2 = 2 
-totalcoin1 = 1
+total = x/2
 bank50 = 0
 bank20 = 0
 coin10 = 0
 coin5 = 0
 coin2 = 0 
 coin1 = 0
+#-------------------#
+bank20 = x % 50
+#-------------------#
+coin5 = x % 10
+coin2 = coin5 % 5
+coin1 = coin2 
 
-for i in range (1):
-    if x % 100 != 0:
-       print("เเลกไม่ได้!")
-    else:
-
+print("bank20")

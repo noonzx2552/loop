@@ -1,17 +1,15 @@
 hour = int(input("Hour:"))
 minute = int(input("minute:"))
-total = 0 
-loop = hour + 1
+total_min = 0 
+total_hr = 0
+if minute >= 1:
+    total_min = 30
+else:
+    total_min = 0
 
-for i in range (loop):
-    if hour >= 1:
-        total += 30
-    elif minute == 0:
-        total += 0
-    elif minute >= 1:
-        total += 30
-    else:
-        total += 0
-
-total = total - 30
+if hour >= 1:
+    total_hr = hour*30
+else:
+    total_hr = 0
+total = total_min + total_hr - 30
 print(total)
